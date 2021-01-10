@@ -1,0 +1,30 @@
+{
+  "name": "app-name-replace-me",
+  "version": "0.0.1",
+  "description": "App Description",
+  "main": "index.js",
+  "scripts": {
+    "start": "electron ./app/main-node.js dev",
+    "package-win": "electron-packager . app-name-replace-me --overwrite --asar=false --platform=win32 --arch=x64 --icon=build/icon.ico --prune=true --out=release-builds --version-string.CompanyName=company-name-replace-me --version-string.ProductName='App Name : Replace me' --max-old-space-size=4096",
+    "package-bundle": "browserify ./app/main-browser.js -o app-name-replace-me-bundle.js",
+    "doc": "jsdoc -c ./.jsdoc.conf.json"
+  },
+  "author": "Timothé Lapetite",
+  "license": "MIT",
+  "dependencies": {
+    "@nkm/collections": "git+https://github.com/Nebukam/nkm-collections.git",
+    "@nkm/utils": "git+https://github.com/Nebukam/nkm-utils.git",
+    "@nkm/common": "git+https://github.com/Nebukam/nkm-common.git",
+    "@nkm/actions": "git+https://github.com/Nebukam/nkm-actions.git",
+    "@nkm/services": "git+https://github.com/Nebukam/nkm-services.git",
+    "@nkm/dialog": "git+https://github.com/Nebukam/nkm-dialog.git",
+    "@nkm/environment": "git+https://github.com/Nebukam/nkm-environment.git",
+    "@nkm/style": "git+https://github.com/Nebukam/nkm-style.git",
+    "@nkm/data-core": "git+https://github.com/Nebukam/nkm-data-core.git",
+    "@nkm/ui-core": "git+https://github.com/Nebukam/nkm-ui-core.git",
+    "@nkm/io-core": "git+https://github.com/Nebukam/nkm-io-core.git",
+    "@nkm/app-core": "git+https://github.com/Nebukam/nkm-app-core.git",
+    "@nkm/io-electron": "git+https://github.com/Nebukam/nkm-io-electron.git",
+    "@nkm/electron-core": "git+https://github.com/Nebukam/nkm-electron-core.git"
+  }
+}
