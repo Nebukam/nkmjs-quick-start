@@ -1,35 +1,36 @@
 //
 // This code will be at the root of the browserify bundle.
+// (important note : this code should not be packaged for electron)
 // Since it's not a class, it will be executed as soon as the bundle is loaded
 // It emulate/compensate for what ElectronApp usually does when run in Electron.
 //
-//  This obviously assume the execution environement has no node capabilities.
+// This obviously assume the execution environement has no node capabilities.
 //
 //
 
-const U = require(`./js/com/util.js`);
-const ENV = require(`./js/com/environment.js`);
-const PATH = require(`./js/com/path.js`);
+const { U, PATH } = require(`@nkm/utils`);
+const { ENV } = require(`@nkm/environment`);
 
 ENV.instance.node = false;
+
 // Prepare the app wrapper BEFORE setting environment infos.
-require(`./js/app.js`).instance.Prepare();
+require(`./js/app`).instance.Prepare();
 
 var paths = {};
 
 paths.exe = '';
-paths[PATH.APP_CONTEXT]='';
-paths[PATH.HOME]='';
-paths[PATH.APP_DATA]='';
-paths[PATH.USER_DATA]='';
-paths[PATH.TEMP]='';
-paths[PATH.DESKTOP]='';
-paths[PATH.DOCUMENTS]='';
-paths[PATH.DOWNLOADS]='';
-paths[PATH.MUSIC]='';
-paths[PATH.PICTURES]='';
-paths[PATH.VIDEOS]='';
-paths[PATH.LOGS]='';
+paths[PATH.APP_CONTEXT] = '';
+paths[PATH.HOME] = '';
+paths[PATH.APP_DATA] = '';
+paths[PATH.USER_DATA] = '';
+paths[PATH.TEMP] = '';
+paths[PATH.DESKTOP] = '';
+paths[PATH.DOCUMENTS] = '';
+paths[PATH.DOWNLOADS] = '';
+paths[PATH.MUSIC] = '';
+paths[PATH.PICTURES] = '';
+paths[PATH.VIDEOS] = '';
+paths[PATH.LOGS] = '';
 
 //
 // Bootstrap the environment.
@@ -38,4 +39,4 @@ paths[PATH.LOGS]='';
 
 // TODO : argv should be the parsed URL.
 
-ENV.instance.Bootstrap({ paths:paths, argv:[] });
+ENV.instance.Bootstrap({ paths: paths, argv: [] });

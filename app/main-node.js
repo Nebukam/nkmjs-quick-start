@@ -1,7 +1,4 @@
-const{app, autoUpdater, BrowserWindow, Menu, MenuItem, globalShortcut } = require(`electron`);
-const path = require(`path`);
-const url = require(`url`);
-const ElectronMain = require(`./js/main/electron-main.js`);
+'use strict';
 
 //
 // Creates background app.
@@ -12,9 +9,8 @@ const ElectronMain = require(`./js/main/electron-main.js`);
 // electron's node capabilities in said app.
 //
 
-var eApp = new ElectronMain({
-    dirname:__dirname,
+const App = require(`./js-node/app`);
+new App({
     appindex:`index-electron.html`,
-    boot:`./js/app.js`,
-    //autoUpdateFeed:feed
+    boot:`./js/app.js`
 });

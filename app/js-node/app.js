@@ -1,4 +1,10 @@
-/**
- * THIS IS THE ELECTRON NODE CODE.
- * It is run in node, meaning it is headless.
- */
+'use strict';
+
+const ElectronBase = require(`@nkm/electron-core`);
+
+class App extends ElectronBase{
+    constructor( p_constants ){ super(p_constants); }
+
+
+
+}
