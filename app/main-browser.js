@@ -1,7 +1,7 @@
 //
 // This code will be at the root of the browserify bundle.
 // (important note : this code should not be packaged for electron)
-// Since it's not a class, it will be executed as soon as the bundle is loaded
+// Since it's not a constructor, it will be executed as soon as the bundle is loaded
 // It emulate/compensate for what ElectronApp usually does when run in Electron.
 //
 // This obviously assume the execution environement has no node capabilities.
