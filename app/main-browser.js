@@ -11,8 +11,6 @@
 const { U, PATH } = require(`@nkm/utils`);
 const { ENV } = require(`@nkm/environment`);
 
-ENV.instance.node = false;
-
 var paths = {};
 
 paths.exe = '';
@@ -29,14 +27,9 @@ paths[PATH.PICTURES] = '';
 paths[PATH.VIDEOS] = '';
 paths[PATH.LOGS] = '';
 
-//
-// Start the environment.
-// This will trigger app deployement in the webpage.
-//
-
 // TODO : argv should be the parsed URL.
 ENV.instance.Start({
     paths: paths,
     argv: [],
-    app: require(`./js/app`)
+    webapp: require(`./js/app`)
 });
