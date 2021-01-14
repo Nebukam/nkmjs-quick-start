@@ -13,9 +13,6 @@ const { ENV } = require(`@nkm/environment`);
 
 ENV.instance.node = false;
 
-// Prepare the app wrapper BEFORE setting environment infos.
-require(`./js/app`).instance.Prepare();
-
 var paths = {};
 
 paths.exe = '';
@@ -38,5 +35,8 @@ paths[PATH.LOGS] = '';
 //
 
 // TODO : argv should be the parsed URL.
-// TODO : Just create & start the app inside the environment rather than having to "prepare it" -- streamline the process.
-ENV.instance.Start({ paths: paths, argv: [] });
+ENV.instance.Start({
+    paths: paths,
+    argv: [],
+    app: require(`./js/app`)
+});
