@@ -33,10 +33,10 @@ paths[PATH.VIDEOS] = '';
 paths[PATH.LOGS] = '';
 
 //
-// Bootstrap the environment.
+// Start the environment.
 // This will trigger app deployement in the webpage.
 //
 
 // TODO : argv should be the parsed URL.
-
-ENV.instance.Bootstrap({ paths: paths, argv: [] });
+// TODO : Just create & start the app inside the environment rather than having to "prepare it" -- streamline the process.
+ENV.instance.Start({ paths: paths, argv: [] });
