@@ -11,6 +11,6 @@
 
 const App = require(`./js-node/app`);
 new App({
-    appindex: `index-electron.html`,
+    appindex: `./index-electron.html`,
     webapp: `./js/app.js`
 });
