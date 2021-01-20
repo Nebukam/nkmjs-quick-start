@@ -11,7 +11,7 @@
 const { U, PATH } = require(`@nkm/utils`);
 const { ENV } = require(`@nkm/environment`);
 
-var paths = {};
+let paths = {};
 
 paths.exe = '';
 paths[PATH.APP_CONTEXT] = '';
