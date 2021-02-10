@@ -31,5 +31,5 @@ paths[PATH.LOGS] = '';
 ENV.instance.Start({
     paths: paths,
     argv: [],
-    webapp: require(`./js/app`)
+    renderer: require(`./js-renderer/app`)
 });

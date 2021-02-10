@@ -9,8 +9,8 @@
 // electron's node capabilities in said app.
 //
 
-const App = require(`./js-node/app`);
+const App = require(`./js-process/app`);
 new App({
-    appindex: `./index-electron.html`,
-    webapp: `./js/app.js`
+    html: `./index-electron.html`,
+    renderer: `./js-renderer/app.js`
 });
