@@ -25,11 +25,11 @@
     "@nkm/services": "git+https://github.com/Nebukam/nkm-services.git",
     "@nkm/style": "git+https://github.com/Nebukam/nkm-style.git",
     "@nkm/ui-core": "git+https://github.com/Nebukam/nkm-ui-core.git",
-    "@nkm/utils": "git+https://github.com/Nebukam/nkm-utils.git",
-    "electron": "^11.1.1"
+    "@nkm/utils": "git+https://github.com/Nebukam/nkm-utils.git"
   },
   "devDependencies": {
     "browserify": "^16.2.3",
+    "electron": "^11.1.1",
     "electron-packager": "^15.2.0"
   }
 }
